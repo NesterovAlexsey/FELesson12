@@ -23,13 +23,17 @@ const carsWithDiesel = cars.filter((car) => car.isDiesel);
 // Создайте новый массив, где оставьте только машины не с дизельным двигателем.
 
 const carsWithPetrol = cars.filter((car) => !car.isDiesel)
-console.log(carsWithPetrol);
 
 // Задание 4
 // Посчитайте общую стоимость всех машин не с дизельным двигателем.
 
+const carsPetrolPrice = carsWithPetrol.reduce((sum, car) => sum + car.price, 0);
+console.log(carsPetrolPrice);
+
 // Задание 5
 // Повысьте цену всех машин в массиве на 20%.
+
+
 
 // Задание 6
 // Создайте новый массив, где все дизельные машины заменены на 
