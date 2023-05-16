@@ -12,7 +12,7 @@ const cars = [
 
 const carNameAndOil = cars.map((car) => {
     return `brand: "${car.brand}", isDisel: ${car.isDiesel}`
-}) 
+}); 
 
 // Задание 2
 // Создайте новый массив, где оставьте только машины с дизельным двигателем.
@@ -38,5 +38,14 @@ cars.forEach((car) => car.price = car.price*1.2);
 // Создайте новый массив, где все дизельные машины заменены на 
 // { brand: "Tesla", price: 25000, isDiesel: false }
 
-const carsTesla = cars.fill('')
-
+console.log(cars);
+const carsTesla = cars.map(car => {
+    if (car.isDiesel) {
+        car.brand = "Tesla";
+        car.price = 25000;
+        car.isDiesel = false;
+    }
+    return car;
+});
+console.log(carsTesla);
+console.log(cars);
