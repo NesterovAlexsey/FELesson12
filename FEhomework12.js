@@ -41,9 +41,7 @@ cars.forEach((car) => car.price = car.price*1.2);
 console.log(cars);
 const carsTesla = cars.map(car => {
     if (car.isDiesel) {
-        car.brand = "Tesla";
-        car.price = 25000;
-        car.isDiesel = false;
+    return  {brand: "Tesla", price: 25000, isDiesel: false}
     }
     return car;
 });
