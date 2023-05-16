@@ -17,10 +17,13 @@ const carNameAndOil = cars.map((car) => {
 // Задание 2
 // Создайте новый массив, где оставьте только машины с дизельным двигателем.
 
-const carsWithDisel = cars.filter((car) => car.isDiesel);
+const carsWithDiesel = cars.filter((car) => car.isDiesel);
 
 // Задание 3
 // Создайте новый массив, где оставьте только машины не с дизельным двигателем.
+
+const carsWithPetrol = cars.filter((car) => !car.isDiesel)
+console.log(carsWithPetrol);
 
 // Задание 4
 // Посчитайте общую стоимость всех машин не с дизельным двигателем.
