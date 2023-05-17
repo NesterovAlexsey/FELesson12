@@ -38,12 +38,9 @@ cars.forEach((car) => car.price = car.price*1.2);
 // Создайте новый массив, где все дизельные машины заменены на 
 // { brand: "Tesla", price: 25000, isDiesel: false }
 
-console.log(cars);
 const carsTesla = cars.map(car => {
     if (car.isDiesel) {
     return  {brand: "Tesla", price: 25000, isDiesel: false}
     }
     return car;
 });
-console.log(carsTesla);
-console.log(cars);
